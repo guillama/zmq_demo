@@ -1,0 +1,13 @@
+[Unit]
+Description=Raspberry ZeroMQ demo service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+Group=maxime
+ExecStart=/home/maxime/rasp0mq --verbose
+
+[Install]
+WantedBy=multi-user.target

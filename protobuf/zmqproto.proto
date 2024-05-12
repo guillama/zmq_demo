@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package zmqproto;
+
+message ZmqProtocol {
+
+    enum MessageType {
+        REQUEST = 0;
+        RESPONSE = 1;
+        NOTIF = 2;
+    }
+
+    MessageType msg_type = 1;
+    int32 id = 2;
+    int32 seq_num = 3;
+    uint32 size = 4;
+    bytes data = 5;
+}
